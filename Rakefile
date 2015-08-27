@@ -1,17 +1,8 @@
-require 'rubygems'
-require 'bundler'
-begin
-  Bundler.setup(:default, :development)
-rescue Bundler::BundlerError => e
-  $stderr.puts e.message
-  $stderr.puts "Run `bundle install` to install missing gems"
-  exit e.status_code
+require "bundler/gem_tasks"
+
+desc "Run specs"
+task :test do
+  system("bundle exec rspec spec") || exit(-1)
 end
 
-require 'bundler/gem_tasks'
-require 'i18n-docs'
-
-task :default => [:test]
-
-# Load tasks
-Dir.glob('tasks/**/*.rake').each { |r| Rake.application.add_import r }
+task default: :test

@@ -1,9 +1,0 @@
-#
-# Configure all spreadsheets you want to import:
-#
-# files:
-#   first.yml: http://www.google.com/spreadsheet/first.csv
-#   second.yml: http://www.google.com/spreadsheet/second.csv
-#
-files:
-  download.yml: "https://docs.google.com/spreadsheet/pub?key=0ApnemdIdiDXedEpiVFR1RkdWMDhnTTgtdzRJMWZMLUE&single=true&gid=0&output=csv"

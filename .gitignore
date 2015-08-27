@@ -7,3 +7,4 @@ pkg/*
 doc/yardoc
 .yardoc
 tmp/*
+.ruby-version

@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.0.0
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+addons:
+  code_climate:
+    repo_token: bceabf3e60db5e6d9ef6c6485eb0f58d6fc5222a780c9b5d07115158ad702976

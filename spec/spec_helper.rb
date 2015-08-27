@@ -1,12 +1,11 @@
-require 'test/unit'
-require 'fileutils'
-require 'mocha/setup'
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 require 'i18n-docs'
 
-Rails = Struct.new(:dummy)
-
-module TestHelper
+module Helpers
 
   def fixture_path
     File.join(File.expand_path(File.dirname(__FILE__)), 'fixtures')
@@ -24,7 +23,8 @@ module TestHelper
     FileUtils::rmtree(tmp_dir)
   end
 
+  def remove_output_dir
+    FileUtils.rm_rf(Dir.glob(File.join(fixture_path,'output','*')))
+  end
+
 end
-
-
-
